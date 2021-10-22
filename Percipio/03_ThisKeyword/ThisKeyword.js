@@ -21,6 +21,7 @@ let myCar = {
     printThis() {
         console.log("this from myCar: ", this);
     },
+    these: this,
     printDetails() {
         console.log(`
         Make: ${this.make}
@@ -43,6 +44,7 @@ let myCar = {
 
 myCar.printThis();
 myCar.printDetails();
+console.log("this from myCar root: ", myCar.these);
 
 myCar.engine.printThis();
 myCar.engine.printDetails();
