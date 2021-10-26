@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+
+<body>
+    <h2>DOM elements, HTML and CSS</h2>
+
+    <p id="jstitle">JavaScript</p>
+
+    <b>Find me by tag name</b>
+
+    <p id="jstext"><i>Javascript is <b>very</b> easy to <b>learn</b></i></p>
+
+    <i class = "jsdescription">Javascript is a programming language</i>
+
+    <h2 id="jsstyled" style="color: red">Javascript</h2>
+
+    <button type="button" onclick="document.getElementById('jsstyled').style.color = 'green'">Click me</button>
+
+    <button type="button" onclick="removeMe()">Remove title</button>
+
+    <button type="button" onclick="removeFirstChildElement()">Remove First List Element</button>
+
+    <button type="button" onclick="replace()">Replace Last List Element</button>
+
+    <ul id="list">
+        <li>Python</li>
+        <li>Java</li>
+        <li>Haskel</li>
+    </ul>
+
+    <script src="DOMIntro.js"></script>
+</body>
+</html>
