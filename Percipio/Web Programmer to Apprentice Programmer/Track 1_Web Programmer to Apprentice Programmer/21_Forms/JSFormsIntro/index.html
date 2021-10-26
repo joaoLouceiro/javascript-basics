@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+
+<body>
+    <h2>Forms introduction</h2>
+
+    <form name = "myForm" action = "../success.html" onsubmit="return validateForm()">
+    
+        <h3>Registration form</h3>
+
+        Username: <input type = "text" placeholder="Your username" name = "username">
+        <br><br>
+        
+        Age : <input type="number" name="age" required> 
+        <br><br>
+        
+        Residency : <input type = "radio" name = "residency" value="resident" checked> Resident
+                    <input type = "radio" name = "residency" value="nonresident" checked> Non-resident
+                    <br><br>
+                    
+        Select Accounts :   <input type="checkbox" name = "acctype" value = "savings">Savings
+                            <input type="checkbox" name = "acctype" value = "checking" checked> Checking
+                            <input type="checkbox" name = "acctype" value = "mmarket">Money market
+                            <br><br>
+        
+        Nationality:    <select id="nationality">
+                            <option value ="1" selected>Portugal</option>
+                            <option value ="2">Canada</option>
+                            <option value ="3">Germany</option>
+                            <option value ="4">India</option>
+                            <option value ="5">USA</option>
+                            <option value ="6">Australia</option>
+                        </select>
+                        <br><br>
+
+        <input type="submit" value="Submit" name="forms">
+        <input type="reset" value="Reset" name="forms">
+
+    </form>
+
+    <script src="JSFormsIntro.js"></script>
+
+</body>
+</html>
