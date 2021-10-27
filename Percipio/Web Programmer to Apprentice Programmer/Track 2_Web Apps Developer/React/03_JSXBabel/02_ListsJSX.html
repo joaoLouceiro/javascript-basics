@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+    <style>
+        .my-fruit {
+            color: red;
+            font-style: italic;
+        }
+    </style>
+
+  </head>
+  <body>
+    <p>Compared to using React.createElement(), JSX is a lot cleaner, 
+        maintaining the DOM's tree-like structure.</p>
+    <div id="my-react-app"></div>
+
+    <script type="text/babel">
+        ReactDOM.render(
+            <div>
+                <div key="el-key" className="my-fruit">
+                    Some of my favorite fruits
+                </div>
+                <ul>
+                    <li key = "a-key">Apple</li>
+                    <li key = "b-key">Banana</li>
+                    <li key = "c-key">Orange</li>
+                </ul>
+            </div>
+        , document.getElementById("my-react-app"));
+    </script>
+  </body>
+</html>
