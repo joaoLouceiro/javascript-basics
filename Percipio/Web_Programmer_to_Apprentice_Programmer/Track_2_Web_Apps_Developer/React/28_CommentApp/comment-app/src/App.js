@@ -1,25 +1,46 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import CommentList from './CommentList';
+import CommentBox from './CommentBox';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+	state = {
+		messages: [
+			"I'm a message!",
+			"I'm another message",
+			"I'm yet another message",
+			"I'm one more message",
+		],
+	};
+
+	addComment = (message) => {
+		this.setState((prevState) => {
+			var messages = prevState.messages.concat();
+      messages.push(message);
+			return {
+				messages: messages,
+			};
+		});
+	};
+  
+  deleteComment = (index) => {
+    this.setState((prevState) => {
+      var messages = prevState.messages.concat();
+      messages.splice(index, 1);
+      return {
+        messages: messages,
+      };
+    });
+  };
+
+	render() {
+		return (
+			<div className='container'>
+				<CommentBox addComment={this.addComment} />
+				<CommentList deleteComment={this.deleteComment} messages={this.state.messages} />
+			</div>
+		);
+	}
 }
 
 export default App;

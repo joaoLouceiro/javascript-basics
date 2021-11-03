@@ -1,3 +1,4 @@
+
 .photo {
   display: inline-block;
   width: 50px;
@@ -39,7 +40,15 @@ img {
 }
 .commentbox {
   margin-bottom: 6px;
+  display: flex;
+  justify-content: center;
 }
+
+.commentlist {
+  display: flex;
+  justify-content: center;
+}
+
 .input {
   width: 239px;
   display: inline-block;
