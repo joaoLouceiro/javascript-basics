@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import Comment from './Comment';
 
 export default class CommentList extends Component {
-
-   /*  deleteComment = (index) => {
-        this.props.deleteComment(index);
-    } */
     
     render() {
 
